@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>تحدي العائلة - المضيف</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: #46178f;
+      color: white;
+      text-align: center;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 40px;
+    }
+
+    .subtitle {
+      opacity: 0.85;
+      margin-bottom: 35px;
+    }
+
+    .card {
+      background: white;
+      color: #222;
+      border-radius: 18px;
+      padding: 25px;
+      margin-bottom: 25px;
+    }
+
+    .pin-title {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .pin {
+      font-size: 55px;
+      font-weight: bold;
+      letter-spacing: 7px;
+      color: #46178f;
+    }
+
+    .join-text {
+      color: #666;
+      margin-top: 10px;
+    }
+
+    .players-title {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+
+    #players {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      min-height: 70px;
+      align-items: center;
+    }
+
+    .waiting {
+      color: #777;
+    }
+
+    .player {
+      background: #eee;
+      padding: 12px 20px;
+      border-radius: 30px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .start-button {
+      width: 100%;
+      padding: 20px;
+      border: none;
+      border-radius: 14px;
+      background: #26890c;
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .start-button:disabled {
+      background: #888;
+      cursor: not-allowed;
+    }
+
+    .back {
+      display: inline-block;
+      margin-top: 20px;
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>🎯 تحدي العائلة</h1>
+
+    <div class="subtitle">
+      شاشة المضيف
+    </div>
+
+    <div class="card">
+
+      <div class="pin-title">
+        رمز اللعبة
+      </div>
+
+      <div class="pin" id="gamePin">
+        ------
+      </div>
+
+      <div class="join-text">
+        شارك هذا الرمز مع اللاعبين 📱
+      </div>
+
+    </div>
+
+
+    <div class="card">
+
+      <div class="players-title">
+        👥 اللاعبون
+        (<span id="playerCount">0</span>)
+      </div>
+
+      <div id="players">
+
+        <div class="waiting">
+          في انتظار انضمام اللاعبين...
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <button
+      class="start-button"
+      id="startButton"
+      disabled
+    >
+      ▶ ابدأ اللعبة
+    </button>
+
+
+    <a href="index.html" class="back">
+      ← العودة للصفحة الرئيسية
+    </a>
+
+  </div>
+
+</body>
+</html>
